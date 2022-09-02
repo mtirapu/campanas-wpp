@@ -18,6 +18,8 @@ class FunnelFactory extends Factory
     {
         return [
             
+            'user_id' => 1,
+
             'funnel_nombre' => $this->faker->sentence(),
 
             'funnel_fecha_registro' => $this->faker->date()

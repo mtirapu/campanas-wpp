@@ -15,6 +15,14 @@ return new class extends Migration
     {
         Schema::create('funnels', function (Blueprint $table) {
             $table->id();
+
+            $table->unsignedBigInteger('user_id');
+
+            /* Creamos un nuevo campo con el metodo
+                encargado de la relacion *foreign* */
+            $table->foreign('user_id')->references('id')->on('users');
+
+
             $table->string('funnel_nombre');
             $table->date('funnel_fecha_registro');
             $table->timestamps();

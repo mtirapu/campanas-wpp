@@ -9,6 +9,9 @@ class Funnel extends Model
 {
     use HasFactory;
 
-    
+    protected $fillable = [
+        'funnel_nombre',
+        'funnel_fecha_registro'
+    ];
 
 }
