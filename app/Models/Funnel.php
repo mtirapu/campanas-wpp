@@ -11,7 +11,8 @@ class Funnel extends Model
 
     protected $fillable = [
         'funnel_nombre',
-        'funnel_fecha_registro'
+        'funnel_fecha_registro',
+        'funnel_id'
     ];
 
 }

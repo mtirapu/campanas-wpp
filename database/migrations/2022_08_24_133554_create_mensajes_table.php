@@ -21,9 +21,13 @@ return new class extends Migration
             por ende va a ser un campo positivo y, a su vez, acepte un tipo de dato entero*/
             $table->unsignedBigInteger('funnel_id');
 
+            $table->unsignedBigInteger('user_id');
+
             /* Creamos un nuevo campo con el metodo
                 encargado de la relacion *foreign* */
             $table->foreign('funnel_id')->references('id')->on('funnels');
+
+            $table->foreign('user_id')->references('id')->on('users');
 
             $table->text('mensaje_cuerpo');
             $table->unsignedBigInteger('mensaje_dias_act');

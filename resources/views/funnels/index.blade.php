@@ -6,7 +6,7 @@
             {{ __('Campañas') }}
         </h2>
 
-        <a href=" {{ route('funnels.create') }} " class="text-xs bg-gray-800 text-white rounded px-2 py-1">Crear Campaña</a>
+        {{-- <a href=" {{ route('funnels.show', $funnels) }} " class="text-xs bg-gray-800 text-white rounded px-2 py-1">Crear Campaña</a> --}}
 
     </x-slot>
 
@@ -23,18 +23,18 @@
 
                 <div class="flex mt-4">
 
-                    <a  href=" {{ route('funnels.single', $funnel) }} "
+                    <a  href=" {{ route('funnel_single', [$funnel->id]) }} "
                         class=" bg-gray-400 text-white rounded px-4 py-2"
                     > Ver </a>
 
-                    <a href=" {{ route('funnels.edit', $funnel) }} " class=" bg-gray-500 text-white rounded px-4 py-2 ml-2"> Editar </a>
+                    {{-- <a href=" {{ route('funnels.edit', $funnel) }} " class=" bg-gray-500 text-white rounded px-4 py-2 ml-2"> Editar </a>
                     
                     <form action=" {{ route('funnels.destroy', $funnel) }} " method="POST">
                         @csrf
                         @method('DELETE')
     
                         <input type="submit" value="Eliminar" class="bg-gray-800 text-white rounded px-4 py-2 ml-2 cursor-pointer" onclick="return confirm('Desea eliminar el post?')">
-                    </form> 
+                    </form>  --}}
 
                 </div>
             

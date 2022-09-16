@@ -9,4 +9,11 @@ class Mensaje extends Model
 {
     use HasFactory;
     public $timestamps = false;
+    
+    protected $fillable = [
+        'funnel_id',
+        'mensaje_cuerpo',
+        'mensaje_dias_act'
+    ];
+
 }

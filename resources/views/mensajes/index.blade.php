@@ -6,7 +6,7 @@
                 {{ __('Mensajes') }}
             </h2>
 
-            <a href=" {{ route('mensajes.create') }} " class="text-xs bg-gray-800 text-white rounded px-2 py-1">Crear Mensaje</a>
+            {{-- <a href=" {{ route('mensajes.create') }} " class="text-xs bg-gray-800 text-white rounded px-2 py-1">Crear Mensaje</a> --}}
 
         </x-slot>
 
@@ -22,7 +22,7 @@
                     <p class="my-1"><span class="font-bold">Día Activación:</span> {{ $mensaje->mensaje_dias_act }} </p>
                     <div class="flex mt-4">
 
-                        <a  href=" {{ route('funnels.edit', $mensaje) }} "
+                        {{-- <a  href=" {{ route('funnels.edit', $mensaje) }} "
                             class=" bg-gray-400 text-white rounded px-4 py-2"
                         > Ver </a>
     
@@ -38,7 +38,7 @@
                                     class="bg-gray-800 text-white rounded px-4 py-2 ml-2 cursor-pointer"
                                     onclick="return confirm('Desea eliminar el post?')">
     
-                        </form>
+                        </form> --}}
     
                     </div>
                 

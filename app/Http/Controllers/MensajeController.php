@@ -9,6 +9,25 @@ use App\Models\Funnel;
 class MensajeController extends Controller
 {
 
+    public function listado()
+    {
+        $mensajes = Mensaje::get();
+
+        dd($mensajes);
+
+        return view( 'funnels.single', [ 'mensajes' => $mensajes ] );
+    }
+
+
+
+
+
+
+
+
+
+    /*
+    
     public function index()
     {
         $mensajes = Mensaje::get();
@@ -20,14 +39,56 @@ class MensajeController extends Controller
         return view('mensajes.index', [ 'mensajes' => $mensajes, 'funnel_nombre' => $funnel_nombre ]);
     }
 
-    /* Dentro de los parentesis declaramos lo que va a 
-        recibir esta funcion. En este caso, recibira el
-        post que se va a eliminar. */
-    public function destroy(Mensaje $mensaje)
-    {
-        $mensaje->delete();
 
-        // Retornamos a la ruta anterior.
-        return back();
+    public function create(Mensaje $mensaje)
+    {
+
+        dd ($mensaje);
+
+        return view('mensajes.create', [
+            
+            'funnel' => $funnel
+        ]);
     }
+
+
+    public function store(Request $request)
+    {
+
+        dd($request);
+
+        die('Hi');
+
+        $request->validate([
+            'mensaje_cuerpo' => 'required',
+            'mensaje_dias_act' => 'required'
+        ]);
+
+        echo $funnel->id;
+
+        die('Hi');
+
+        $mensaje = $request->user()->mensajes()->create([
+
+            'funnel_id' => $id,
+            'mensaje_cuerpo' => $request->mensaje_cuerpo,
+            'mensaje_dias_act' => $request->mensaje_dias_act
+
+        ]);
+
+        return redirect()->route('funnels.show', [
+            'funnel' => $funnel,
+            'mensaje' => $mensaje
+        ]);
+    }
+
+        public function destroy(Mensaje $mensaje)
+        {
+            $mensaje->delete();
+    
+            // Retornamos a la ruta anterior.
+            return back();
+        }
+    
+    */
 }

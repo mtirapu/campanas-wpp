@@ -12,12 +12,12 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('funnels.index')" :active="request()->routeIs('funnels')">
+                    {{-- <x-nav-link :href="route('funnels.index')" :active="request()->routeIs('funnels')">
                         {{ __('Campañas') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('mensajes.index')" :active="request()->routeIs('mensajes')">
+                    </x-nav-link> --}}
+                    {{-- <x-nav-link :href="route('mensajes.index')" :active="request()->routeIs('mensajes')">
                         {{ __('Mensajes') }}
-                    </x-nav-link>
+                    </x-nav-link> --}}
                 </div>
             </div>
 

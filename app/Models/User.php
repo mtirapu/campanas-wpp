@@ -46,4 +46,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Funnel::class);
     }
+
+    public function mensajes()
+    {
+        return $this->hasMany(Mensaje::class);
+    }
 }
