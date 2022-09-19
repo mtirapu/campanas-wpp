@@ -12,7 +12,7 @@
                     
                     <!-- El método en la ruta será UPDATE y se le enviará un $post para editar su información. -->
                     <!-- El method va a ser POST porque queremos alterar la BD. -->
-                    <form action=" {{ route('mensajes.create', [$mensaje, $funnel]) }} " method="POST">
+                    <form action=" {{ route('mensaje_store', $mensaje) }} " method="POST">
 
                         <!-- El guión bajo lo usamos para hacer referencia a una vista que no funciona directamente.  -->
                         <!-- Sino que funciona como parte de otra.  -->

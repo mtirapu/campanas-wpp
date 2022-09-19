@@ -12,12 +12,12 @@
     
     <input type="text" name="mensaje_dias_act" class="rounded border-gray-200 w-full mb-4" value="{{old('mensaje_dias_act', $mensaje->mensaje_dias_act)}}">
 
-    <input type="text" name="funnel_id" hidden class="rounded border-gray-200 w-full mb-4" value="{{$funnel->id}}">
+    <input type="text" name="funnel_id" hidden class="rounded border-gray-200 w-full mb-4" value="{{old('funnel_id', $mensaje->funnel_id)}}">
 
 
     <div class="flex justify-between items-center">
 
-        <a href="{{ route('funnels.index') }}" class="text-indigo-600" > Volver </a>
+        <a href="{{ route('funnels') }}" class="text-indigo-600" > Volver </a>
 
         <input type="submit" value="Enviar" class="bg-gray-800 text-white rounded px-4 py-2">
 

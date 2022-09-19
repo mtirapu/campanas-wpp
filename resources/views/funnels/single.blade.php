@@ -6,10 +6,10 @@
         <x-slot name="header">
             <h2 class="font-bold text-xl text-gray-800 leading-tight flex items-center justify-between">
 
-                {{ __('Campaña: ' . $funnel->funnel_nombre) }}
+                {{ __('Campaña') }}
             </h2>
     
-            {{-- <a href=" {{ route('funnels.index') }} " class="text-xs bg-gray-800 text-white rounded px-2 py-1">Volver</a> --}}
+            <a href=" {{ route('funnels') }} " class="text-xs bg-gray-800 text-white rounded px-2 py-1">Volver</a>
     
         </x-slot>
     
@@ -56,7 +56,7 @@
                         
                         <h3 class="font-bold text-lg">Mensajes</h3>
 
-                        <a href="{{ route('mensaje-create', [$funnel->id] ) }}" class="text-xs bg-gray-800 text-white rounded px-2 py-1">Crear Mensaje</a>
+                        <a href="{{ route('mensaje_create', [$funnel->id] ) }}" class="text-xs bg-gray-800 text-white rounded px-2 py-1">Crear Mensaje</a>
 
                     </div>
 

@@ -9,16 +9,33 @@ use App\Models\Funnel;
 class MensajeController extends Controller
 {
 
-    public function listado()
+    public function create($id, Mensaje $mensaje)
     {
-        $mensajes = Mensaje::get();
 
-        dd($mensajes);
+        $mensaje->funnel_id = $id;
 
-        return view( 'funnels.single', [ 'mensajes' => $mensajes ] );
+        return view( 'mensajes.create', [ 'mensaje' => $mensaje ] );
     }
 
 
+    public function store(Request $request)
+    {
+
+        $request->validate([
+            'mensaje_cuerpo' => 'required',
+            'mensaje_dias_act' => 'required'
+        ]);
+
+        $mensaje = $request->user()->mensajes()->create([
+
+            'funnel_id' => $request->funnel_id,
+            'mensaje_cuerpo' => $request->mensaje_cuerpo,
+            'mensaje_dias_act' => $request->mensaje_dias_act
+
+        ]);
+
+        return redirect()->route('funnels');
+    }
 
 
 

@@ -19,7 +19,9 @@ Route::controller(FunnelController::class)->group( function () {
 
 Route::controller(MensajeController::class)->group( function () {
 
-    Route::get('/funnels/{id}/mensaje/create',             'create' )->name('mensaje-create');
+    Route::get('/funnels/{id}/mensaje/create',             'create' )->name('mensaje_create');
+
+    Route::post('/funnels/store',             'store' )->name('mensaje_store');
 
 } );
 
